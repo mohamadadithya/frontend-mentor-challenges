@@ -1,0 +1,141 @@
+:root {
+    /* Primary Colors */
+    --softRed: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --darkDesaturatedCyan: hsl(167, 40%, 24%);
+    --darkModerateCyan: hsl(168, 34%, 41%);
+    --darkBlue: hsl(198, 62%, 26%);
+    /* Neutral Colors */
+    --veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+    --veryDarkGrayishBlue: hsl(213, 9%, 39%);
+    --darkGrayishBlue: hsl(232, 10%, 55%);
+    --grayishBlue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+    /* Fonts */
+    --barlowFont: 'Barlow', sans-serif;
+    --frauncesFont: 'Fraunces', serif;
+    font-size: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+header {
+    background-image: url('../images/desktop/image-header.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    margin-bottom: 4em;
+}
+
+header .navbar .logo {
+    font-family: var(--barlowFont);
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+header .navbar .nav-links {
+    display: flex;
+    font-family: var(--barlowFont);
+}
+
+header .navbar .nav-links li {
+    margin-right: 2em;
+}
+
+header .navbar .nav-links li .link {
+    color: var(--white);
+}
+
+header .navbar .nav-links li:nth-child(4) {
+    margin-right: 0;
+}
+
+header .navbar .nav-links .button {
+    font-family: var(--frauncesFont);
+    font-size: .9rem;
+    text-transform: uppercase;
+    background-color: var(--white);
+    color: var(--veryDarkDesaturatedBlue) !important;
+    padding: 12px 20px;
+    border-radius: 30px;
+}
+
+header .navbar .menu-icon {
+    display: none;
+}
+
+header .heading {
+    font-family: var(--frauncesFont);
+    font-weight: 900;
+    font-size: 3.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+header .arrow-down-icon {
+    margin-top: 1.8em;
+}
+
+/* Utility Classes */
+.container {
+    margin: 0 40px;
+    position: relative;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 375px) {
+    header .navbar .nav-links {
+        display: block;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        background-color: var(--white);
+        text-align: center;
+        padding: 2em 0;
+        display: none;
+    }
+
+    header .navbar .nav-links.show {
+        display: block;
+    }
+
+    header .navbar .nav-links li {
+        margin-bottom: 30px;
+        margin-right: 0em;
+    }
+
+    header .navbar .nav-links li .link {
+        color: var(--grayishBlue);
+    }
+
+    header .navbar .nav-links .button {
+        background-color: var(--yellow);
+    }
+
+    header .navbar .menu-icon {
+        display: block;
+    }
+
+    header .heading {
+        font-size: 2rem;
+    }
+}
