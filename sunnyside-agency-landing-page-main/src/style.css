@@ -15,6 +15,7 @@
     --barlowFont: 'Barlow', sans-serif;
     --frauncesFont: 'Fraunces', serif;
     font-size: 18px;
+    font-family: var(--barlowFont);
 }
 
 * {
@@ -27,6 +28,10 @@
     list-style: none;
     font-family: inherit;
     font-size: inherit;
+}
+
+img {
+    width: 100%;
 }
 
 header {
@@ -93,6 +98,72 @@ header .heading {
 
 header .arrow-down-icon {
     margin-top: 1.8em;
+    width: auto;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.row-1,
+.row-2 {
+    align-items: center;
+}
+
+.row-1 .details,
+.row-2 .details {
+    padding: 6.8em;
+}
+
+.row-1 .details .heading,
+.row-2 .details .heading {
+    font-family: var(--frauncesFont);
+    font-size: 2rem;
+    color: var(--veryDarkDesaturatedBlue);
+    margin-bottom: 1em;
+}
+
+.row-1 .details .paragraph,
+.row-2 .details .paragraph {
+    color: var(--darkGrayishBlue);
+    margin-bottom: 1.5em;
+}
+
+.row-1 .details .link,
+.row-2 .details .link {
+    font-family: var(--frauncesFont);
+    text-transform: uppercase;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+.row-3 .pic-1,
+.row-3 .pic-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-size: cover;
+    height: 600px;
+    padding: 4em 7em;
+    text-align: center;
+}
+
+.row-3 .heading {
+    font-family: var(--frauncesFont);
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+.row-3 .pic-1 {
+    background: url('../images/desktop/image-graphic-design.jpg');
+    color: var(--darkDesaturatedCyan);
+}
+
+.row-3 .pic-2 {
+    background: url('../images/desktop/image-photography.jpg');
+    color: var(--veryDarkDesaturatedBlue);
 }
 
 /* Utility Classes */
@@ -137,5 +208,28 @@ header .arrow-down-icon {
 
     header .heading {
         font-size: 2rem;
+    }
+
+    .row-1,
+    .row-2,
+    .row-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .row-1 .pic,
+    .row-2 .pic {
+        order: -1;
+    }
+
+    .row-1 .details,
+    .row-2 .details {
+        text-align: center;
+        padding: 2em;
+    }
+
+    .row-3 .pic-1,
+    .row-3 .pic-2 {
+        padding: 2em;
+        background-position: center;
     }
 }
