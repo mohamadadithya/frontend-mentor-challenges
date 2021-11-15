@@ -5,6 +5,7 @@
     --darkDesaturatedCyan: hsl(167, 40%, 24%);
     --darkModerateCyan: hsl(168, 34%, 41%);
     --darkBlue: hsl(198, 62%, 26%);
+    --skyBlue: hsl(166, 42%, 70%);
     /* Neutral Colors */
     --veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
     --veryDarkGrayishBlue: hsl(213, 9%, 39%);
@@ -16,6 +17,7 @@
     --frauncesFont: 'Fraunces', serif;
     font-size: 18px;
     font-family: var(--barlowFont);
+    scroll-behavior: smooth;
 }
 
 * {
@@ -32,6 +34,7 @@
 
 img {
     width: 100%;
+    object-fit: cover;
 }
 
 header {
@@ -48,12 +51,6 @@ header .navbar {
     align-items: center;
     padding: 1em 0;
     margin-bottom: 4em;
-}
-
-header .navbar .logo {
-    font-family: var(--barlowFont);
-    font-size: 1.5rem;
-    color: var(--white);
 }
 
 header .navbar .nav-links {
@@ -81,6 +78,11 @@ header .navbar .nav-links .button {
     color: var(--veryDarkDesaturatedBlue) !important;
     padding: 12px 20px;
     border-radius: 30px;
+}
+
+header .navbar .nav-links .button:hover {
+    background-color: rgba(255, 255, 255, .4);
+    color: var(--white) !important;
 }
 
 header .navbar .menu-icon {
@@ -139,6 +141,20 @@ header .arrow-down-icon {
     color: var(--veryDarkDesaturatedBlue);
 }
 
+.row-1 .details .link:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    text-decoration-thickness: 3px;
+    text-underline-offset: -2px;
+}
+
+.row-2 .details .link:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--softRed);
+    text-decoration-thickness: 3px;
+    text-underline-offset: -2px;
+}
+
 .row-3 .pic-1,
 .row-3 .pic-2 {
     display: flex;
@@ -166,10 +182,93 @@ header .arrow-down-icon {
     color: var(--veryDarkDesaturatedBlue);
 }
 
-/* Utility Classes */
-.container {
-    margin: 0 40px;
-    position: relative;
+.testimonials {
+    text-align: center;
+    padding: 6em;
+}
+
+.testimonials .heading {
+    font-family: var(--frauncesFont);
+    font-size: 1.3rem;
+    color: var(--grayishBlue);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 3em;
+}
+
+.testimonials .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4em;
+}
+
+.testimonials .row .testi .photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 2em;
+}
+
+.testimonials .row .testi .message {
+    color: var(--veryDarkGrayishBlue);
+    margin-bottom: 2em;
+}
+
+.testimonials .row .testi .name {
+    font-family: var(--frauncesFont);
+    color: var(--veryDarkDesaturatedBlue);
+    margin-bottom: 10px;
+}
+
+.testimonials .row .testi .profession {
+    color: var(--grayishBlue);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer {
+    background-color: var(--skyBlue);
+    text-align: center;
+    padding: 3em 2em;
+}
+
+footer .logo {
+    display: block;
+    margin-bottom: 1.2em;
+}
+
+footer .links,
+footer .contact-links {
+    display: flex;
+    justify-content: center;
+}
+
+footer .links {
+    gap: 2em;
+}
+
+footer .contact-links {
+    gap: 1.2em;
+}
+
+footer .links a {
+    color: var(--darkGrayishBlue);
+}
+
+footer .links a:hover,
+footer .contact-links a:hover {
+    color: white;
+}
+
+footer .contact-links {
+    margin-top: 3em;
+}
+
+footer .contact-links a {
+    color: var(--darkDesaturatedCyan);
 }
 
 /* Mobile View */
@@ -204,6 +303,7 @@ header .arrow-down-icon {
 
     header .navbar .menu-icon {
         display: block;
+        width: auto;
     }
 
     header .heading {
@@ -232,4 +332,34 @@ header .arrow-down-icon {
         padding: 2em;
         background-position: center;
     }
+
+    .testimonials {
+        padding: 3.5em 2em;
+    }
+
+    .testimonials .heading {
+        font-size: 1rem;
+    }
+
+    .testimonials .row {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials .row .testi {
+        margin-bottom: 2.4em;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery img {
+        height: 200px;
+    }
+}
+
+/* Utility Classes */
+.container {
+    margin: 0 40px;
+    position: relative;
 }
