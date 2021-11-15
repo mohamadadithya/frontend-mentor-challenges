@@ -259,7 +259,8 @@ footer .links a {
 }
 
 footer .links a:hover,
-footer .contact-links a:hover {
+footer .contact-links a:hover,
+footer .attribution a:hover {
     color: white;
 }
 
@@ -269,6 +270,16 @@ footer .contact-links {
 
 footer .contact-links a {
     color: var(--darkDesaturatedCyan);
+}
+
+footer .attribution {
+    margin-top: 3em;
+    font-size: .8rem;
+    color: var(--darkDesaturatedCyan);
+}
+
+footer .attribution a {
+    color: var(--veryDarkGrayishBlue);
 }
 
 /* Mobile View */
