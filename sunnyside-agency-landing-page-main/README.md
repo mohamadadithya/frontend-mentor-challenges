@@ -11,9 +11,6 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -43,18 +40,8 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ## Author
 
 - Website - [https://m-adithya.my.id](https://www.m-adithya.my.id)
 - Frontend Mentor - [@mohamadadithya](https://www.frontendmentor.io/profile/mohamadadithya)
 - Twitter - [@MohamadAdithya](https://www.twitter.com/mohamadadithya)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
