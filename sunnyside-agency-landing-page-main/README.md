@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-using-flexbox-grid-and-media-queries-fKahFM-yr)
-- Live Site URL: [Add live site URL here](https://sunnyside-lp-adithya.netlify.app/)
+- Solution URL: [https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-using-flexbox-grid-and-media-queries-fKahFM-yr](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-using-flexbox-grid-and-media-queries-fKahFM-yr)
+- Live Site URL: [https://sunnyside-lp-adithya.netlify.app/](https://sunnyside-lp-adithya.netlify.app/)
 
 ## My process
 
@@ -47,9 +47,9 @@ Users should be able to:
 
 ## Author
 
-- Website - [Mohamad Adithya](https://www.m-adithya.my.id)
-- Frontend Mentor - [@mohamadadithya](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@MohamadAdithya](https://www.twitter.com/yourusername)
+- Website - [https://m-adithya.my.id](https://www.m-adithya.my.id)
+- Frontend Mentor - [@mohamadadithya](https://www.frontendmentor.io/profile/mohamadadithya)
+- Twitter - [@MohamadAdithya](https://www.twitter.com/mohamadadithya)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
