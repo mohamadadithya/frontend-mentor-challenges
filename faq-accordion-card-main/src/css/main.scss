@@ -1,3 +1,16 @@
+$veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+$softRed: hsl(14, 88%, 65%);
+$softViolet: hsl(273, 75%, 66%);
+$softBlue: hsl(240, 73%, 65%);
+$veryDarkGrayishBlue: hsl(237, 12%, 33%);
+$darkGrayishBlue: hsl(240, 6%, 50%);
+$lightGrayishBlue: hsl(240, 5%, 91%);
+
+:root {
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,4 +20,128 @@
     font-family: inherit;
     font-weight: inherit;
     text-decoration: none;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to top, $softBlue, $softViolet);
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: 0 14em;
+    background-color: white;
+    padding: 6em 0;
+    padding-right: 6em;
+    border-radius: 2rem;
+    background-image: url('../../images/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -48em -25em;
+    position: relative;
+    height: max-content;
+
+    .title {
+        font-size: 3.2rem;
+        font-weight: bold;
+        margin-bottom: .85em;
+    }
+
+    .illustration {
+        overflow-x: hidden;
+
+        &__woman {
+            transform: translateX(-80px);
+
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    .illustration__box {
+        position: absolute;
+        bottom: 9.6em;
+        left: -7.5em;
+        z-index: 2;
+    }
+
+    .accordion-items {
+        .accordion {
+            border-bottom: 1px solid $lightGrayishBlue;
+            padding: 1.6em 0;
+
+            &__button {
+                width: 100%;
+                text-align: left;
+                background-color: transparent;
+                border: none;
+                color: $veryDarkDesaturatedBlue;
+                cursor: pointer;
+                transition: .4s;
+            }
+
+            &__state {
+                &:hover .accordion__button {
+                    color: $softRed;
+                }
+
+                &.active .accordion__button {
+                    font-weight: bold;
+                }
+            }
+
+            &__panel {
+                display: none;
+                margin-top: 10px;
+                color: $darkGrayishBlue;
+            }
+
+            .d-flex {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .card {
+        grid-template-columns: 1fr;
+        margin: 15em 2em;
+        padding: 3em;
+        background-image: url('../../images/bg-pattern-mobile.svg');
+        background-size: auto;
+        background-position: top;
+        width: 90%;
+
+        .title {
+            text-align: center;
+        }
+
+        .illustration {
+            overflow: visible;
+
+            &__woman {
+                &:nth-child(1) {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    display: block;
+                    transform: translate(0, -1.3em);
+                    margin-top: -12em;
+                    margin-bottom: 3em;
+                }
+            }
+        }
+
+        .illustration__box {
+            display: none;
+        }
+    }
 }
