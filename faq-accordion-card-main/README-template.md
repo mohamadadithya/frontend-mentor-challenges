@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion-card-using-grid-and-flexbox-CxcWd5PWX](https://www.frontendmentor.io/solutions/faq-accordion-card-using-grid-and-flexbox-CxcWd5PWX)
+- Live Site URL: [https://faq-accordion-adithya.netlify.app/](https://faq-accordion-adithya.netlify.app/)
 
 ## My process
 
@@ -37,6 +37,8 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+- SCSS
+- JavaScript
 - Flexbox
 - CSS Grid
 
