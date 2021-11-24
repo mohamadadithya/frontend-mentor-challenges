@@ -24,7 +24,7 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0d192b;
 }
 
