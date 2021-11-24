@@ -16,6 +16,14 @@ html {
   list-style: none;
 }
 
+body {
+  padding: 2.5em 0;
+  background-image: url("../../images/bg-pattern-top-desktop.svg"), url("../../images/bg-pattern-bottom-desktop.svg");
+  background-size: max(50%, 400px);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+
 img {
   width: 100%;
   -o-object-fit: cover;
@@ -35,6 +43,7 @@ img {
   color: #502050;
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .row:nth-child(1) .copy__description {
@@ -111,18 +120,23 @@ img {
 
 .row:nth-child(2) .cards__item .buyer__testimonial {
   font-weight: 500;
+  color: #f7f2f7;
 }
 
 .container {
   margin: 4em 2em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
   .row:nth-child(1) {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    gap: 6em;
     justify-items: center;
   }
   .row:nth-child(1) .copy {
@@ -132,7 +146,7 @@ img {
     font-size: 3.5rem;
   }
   .row:nth-child(1) .copy__description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .row:nth-child(1) .reviews__item {
     -webkit-box-orient: horizontal;
@@ -141,16 +155,20 @@ img {
             flex-direction: row;
   }
   .row:nth-child(1) .reviews__item:nth-child(1) {
-    -webkit-transform: translateX(-60px);
-            transform: translateX(-60px);
+    margin-left: -5em;
+    -webkit-transform: translateX(-3.6em);
+            transform: translateX(-3.6em);
   }
   .row:nth-child(1) .reviews__item:nth-child(2) {
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
+    margin-left: -3em;
+    padding-right: 3em;
+    -webkit-transform: translateX(-1em);
+            transform: translateX(-1em);
   }
   .row:nth-child(1) .reviews__item:nth-child(3) {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
+    margin-left: -4em;
+    -webkit-transform: translateX(3em);
+            transform: translateX(3em);
   }
   .row:nth-child(1) .reviews__item__stars {
     margin-bottom: 0;

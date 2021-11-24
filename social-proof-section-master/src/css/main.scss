@@ -21,6 +21,14 @@ html {
     list-style: none;
 }
 
+body {
+    padding: 2.5em 0;
+    background-image: url('../../images/bg-pattern-top-desktop.svg'), url('../../images/bg-pattern-bottom-desktop.svg');
+    background-size: unquote("max(50%, 400px)");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+}
+
 img {
     width: 100%;
     object-fit: cover;
@@ -37,6 +45,7 @@ img {
             color: $clr-primaryOne;
             font-size: 3rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         &__description {
@@ -104,6 +113,7 @@ img {
 
                 &__testimonial {
                     font-weight: 500;
+                    color: $clr-neutralTwo;
                 }
             }
         }
@@ -115,10 +125,15 @@ img {
     margin: 4em 2em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+    body {
+        padding: 0;
+    }
+
     .row:nth-child(1) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 6em;
         justify-items: center;
 
         .copy {
@@ -129,7 +144,7 @@ img {
             }
 
             &__description {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
         }
 
@@ -138,15 +153,19 @@ img {
                 flex-direction: row;
 
                 &:nth-child(1) {
-                    transform: translateX(-60px);
+                    margin-left: -5em;
+                    transform: translateX(-3.6em);
                 }
 
                 &:nth-child(2) {
-                    transform: translateX(-20px);
+                    margin-left: -3em;
+                    padding-right: 3em;
+                    transform: translateX(-1em);
                 }
 
                 &:nth-child(3) {
-                    transform: translateX(20px);
+                    margin-left: -4em;
+                    transform: translateX(3em);
                 }
 
                 &__stars {
