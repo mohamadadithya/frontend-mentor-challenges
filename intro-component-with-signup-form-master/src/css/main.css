@@ -1,0 +1,122 @@
+:root {
+  accent-color: #6055a5;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+main {
+  background-image: url("../../images/bg-intro-desktop.png");
+  background-color: #ff7a7a;
+  background-size: cover;
+  padding: 4em 1.4em;
+}
+
+.auth {
+  display: block;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.auth .intro .copy {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: .8em;
+}
+
+.auth .intro .description {
+  font-weight: 500;
+  margin-bottom: 3.2em;
+}
+
+.auth .card {
+  -webkit-box-shadow: 0 8px rgba(62, 60, 73, 0.3);
+          box-shadow: 0 8px rgba(62, 60, 73, 0.3);
+}
+
+.auth .card.offer {
+  padding: 1.6em 4.6em;
+  background-color: #6055a5;
+  margin-bottom: 1.8em;
+  border-radius: 8px;
+}
+
+.auth .card.offer .highlight-text {
+  font-weight: 700;
+}
+
+.auth .card.login-form {
+  background-color: white;
+  padding: 1.6em;
+  border-radius: 10px;
+}
+
+.auth .card.login-form .input-group {
+  border: 1px solid #b9b6d3;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.auth .card.login-form .input-group input {
+  width: 100%;
+  font-weight: 600;
+  padding: 1em;
+  border-radius: 5px;
+  color: #3e3c49;
+}
+
+.auth .card.login-form .input-group input:focus {
+  border: 2px solid #b9b6d3;
+}
+
+.auth .card.login-form .btn-submit {
+  width: 100%;
+  background-color: #38cc8c;
+  padding: 1em 2em;
+  color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px rgba(50, 158, 111, 0.9);
+          box-shadow: 0 4px rgba(50, 158, 111, 0.9);
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.auth .card.login-form .information {
+  color: #b9b6d3;
+}
+
+.auth .card.login-form .information .link {
+  color: #ff7a7a;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .auth {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,3 +1,15 @@
+$clr-primaryOne: hsl(0, 100%, 74%);
+$clr-primaryTwo: hsl(154, 59%, 51%);
+$clr-neutralOne: hsl(249, 10%, 26%);
+$clr-neutralTwo: hsl(246, 25%, 77%);
+$clr-accent: hsl(248, 32%, 49%);
+
+:root {
+    accent-color: $clr-accent;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,4 +19,104 @@
     font-size: inherit;
     font-weight: inherit;
     text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+main {
+    background-image: url('../../images/bg-intro-desktop.png');
+    background-color: $clr-primaryOne;
+    background-size: cover;
+    padding: 4em 1.4em;
+}
+
+.auth {
+    display: block;
+    height: 100%;
+    text-align: center;
+    color: white;
+
+    .intro {
+        .copy {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: .8em;
+        }
+
+        .description {
+            font-weight: 500;
+            margin-bottom: 3.2em;
+        }
+    }
+
+    .card {
+        box-shadow: 0 8px rgba($color: $clr-neutralOne, $alpha: .3);
+
+        &.offer {
+            padding: 1.6em 4.6em;
+            background-color: $clr-accent;
+            margin-bottom: 1.8em;
+            border-radius: 8px;
+
+            .highlight-text {
+                font-weight: 700;
+            }
+        }
+
+        &.login-form {
+            background-color: white;
+            padding: 1.6em;
+            border-radius: 10px;
+
+            .input-group {
+                border: 1px solid $clr-neutralTwo;
+                border-radius: 5px;
+                margin-bottom: 1em;
+
+                input {
+                    width: 100%;
+                    font-weight: 600;
+                    padding: 1em;
+                    border-radius: 5px;
+                    color: $clr-neutralOne;
+
+                    &:focus {
+                        border: 2px solid $clr-neutralTwo;
+                    }
+                }
+            }
+
+            .btn-submit {
+                width: 100%;
+                background-color: $clr-primaryTwo;
+                padding: 1em 2em;
+                color: white;
+                border-radius: 5px;
+                box-shadow: 0 4px rgba($color: rgb(50, 158, 111), $alpha: .9);
+                margin-bottom: 1em;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 1px;
+                cursor: pointer;
+            }
+
+            .information {
+                color: $clr-neutralTwo;
+
+                .link {
+                    color: $clr-primaryOne;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .auth {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: left;
+    }
 }
