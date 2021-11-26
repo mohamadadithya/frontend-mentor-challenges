@@ -61,7 +61,7 @@ main {
 
 .auth .card.login-form {
   background-color: white;
-  padding: 1.6em;
+  padding: 1.8em;
   border-radius: 10px;
 }
 
@@ -130,7 +130,7 @@ main {
   border-radius: 5px;
   -webkit-box-shadow: 0 4px rgba(50, 158, 111, 0.9);
           box-shadow: 0 4px rgba(50, 158, 111, 0.9);
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
@@ -154,11 +154,11 @@ main {
 
 @media (min-width: 768px) {
   main {
-    padding: 3em 4em;
-    height: 100vh;
+    padding: 0 4em;
     display: -ms-grid;
     display: grid;
     place-items: center;
+    height: 100vh;
   }
   .auth {
     display: -ms-grid;

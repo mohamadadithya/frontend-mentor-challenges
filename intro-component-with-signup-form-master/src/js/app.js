@@ -1,7 +1,6 @@
 const loginForm = document.querySelector('.login-form')
 const inputWrapper = document.querySelectorAll('.input-wrapper')
 const inputs = document.querySelectorAll('input')
-const mainTag = document.querySelector('main')
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -12,10 +11,8 @@ loginForm.addEventListener('submit', (e) => {
             inputWrapper[i].classList.add('error')
             const errorFeedback = inputWrapper[i].querySelector('.error-feedback')
             errorFeedback.innerText = `${input.placeholder} cannot be empty`
-            mainTag.style.height = '100%'
         } else {
             inputWrapper[i].classList.remove('error')
-            mainTag.style.height = '100vh'
         }
     });
 
