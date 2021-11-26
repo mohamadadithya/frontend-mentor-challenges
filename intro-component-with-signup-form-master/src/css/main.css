@@ -156,6 +156,9 @@ main {
   main {
     padding: 3em 4em;
     height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
   }
   .auth {
     display: -ms-grid;

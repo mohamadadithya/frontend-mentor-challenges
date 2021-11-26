@@ -157,6 +157,8 @@ main {
     main {
         padding: 3em 4em;
         height: 100vh;
+        display: grid;
+        place-items: center;
     }
 
     .auth {
