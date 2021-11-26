@@ -23,11 +23,11 @@ main {
   background-color: #ff7a7a;
   background-size: cover;
   padding: 4em 1.4em;
+  height: 100%;
 }
 
 .auth {
   display: block;
-  height: 100%;
   text-align: center;
   color: white;
 }
@@ -65,22 +65,61 @@ main {
   border-radius: 10px;
 }
 
-.auth .card.login-form .input-group {
-  border: 1px solid #b9b6d3;
-  border-radius: 5px;
+.auth .card.login-form .input-wrapper {
   margin-bottom: 1em;
 }
 
-.auth .card.login-form .input-group input {
-  width: 100%;
-  font-weight: 600;
-  padding: 1em;
+.auth .card.login-form .input-wrapper .input-group {
+  border: 1px solid #b9b6d3;
   border-radius: 5px;
-  color: #3e3c49;
+  padding: 1em 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: .4em;
 }
 
-.auth .card.login-form .input-group input:focus {
-  border: 2px solid #b9b6d3;
+.auth .card.login-form .input-wrapper .input-group input {
+  width: 100%;
+  font-weight: 600;
+  color: #3e3c49;
+  margin-right: .8em;
+}
+
+.auth .card.login-form .input-wrapper .input-group:focus-within {
+  border-width: 2px;
+}
+
+.auth .card.login-form .input-wrapper .input-group .invalid-feedback {
+  display: none;
+}
+
+.auth .card.login-form .input-wrapper .error-feedback {
+  color: #ff7a7a;
+  text-align: right;
+  font-style: italic;
+  font-size: .8rem;
+  font-weight: 500;
+  display: none;
+}
+
+.auth .card.login-form .input-wrapper.error .input-group {
+  border: 2px solid #ff7a7a;
+}
+
+.auth .card.login-form .input-wrapper.error .input-group input {
+  color: #ff7a7a;
+}
+
+.auth .card.login-form .input-wrapper.error .input-group .invalid-feedback {
+  display: block;
+}
+
+.auth .card.login-form .input-wrapper.error .error-feedback {
+  display: block;
 }
 
 .auth .card.login-form .btn-submit {
@@ -98,16 +137,26 @@ main {
   cursor: pointer;
 }
 
+.auth .card.login-form .btn-submit:hover {
+  opacity: .65;
+}
+
 .auth .card.login-form .information {
   color: #b9b6d3;
+  font-size: .8rem;
+  text-align: center;
 }
 
 .auth .card.login-form .information .link {
   color: #ff7a7a;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
+  main {
+    padding: 3em 4em;
+    height: 100vh;
+  }
   .auth {
     display: -ms-grid;
     display: grid;
@@ -117,6 +166,15 @@ main {
         -ms-flex-align: center;
             align-items: center;
     text-align: left;
+    gap: 2em;
+  }
+  .auth .intro .copy {
+    font-size: 3rem;
+    margin-bottom: .4em;
+  }
+  .auth .card.offer {
+    padding: 1.6em 0;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -28,11 +28,11 @@ main {
     background-color: $clr-primaryOne;
     background-size: cover;
     padding: 4em 1.4em;
+    height: 100%;
 }
 
 .auth {
     display: block;
-    height: 100%;
     text-align: center;
     color: white;
 
@@ -68,21 +68,56 @@ main {
             padding: 1.6em;
             border-radius: 10px;
 
-            .input-group {
-                border: 1px solid $clr-neutralTwo;
-                border-radius: 5px;
+            .input-wrapper {
                 margin-bottom: 1em;
 
-                input {
-                    width: 100%;
-                    font-weight: 600;
-                    padding: 1em;
+                .input-group {
+                    border: 1px solid $clr-neutralTwo;
                     border-radius: 5px;
-                    color: $clr-neutralOne;
+                    padding: 1em 1.4em;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: .4em;
 
-                    &:focus {
-                        border: 2px solid $clr-neutralTwo;
+                    input {
+                        width: 100%;
+                        font-weight: 600;
+                        color: $clr-neutralOne;
+                        margin-right: .8em;
                     }
+
+                    &:focus-within {
+                        border-width: 2px;
+                    }
+
+                    .invalid-feedback {
+                        display: none;
+                    }
+                }
+
+                .error-feedback {
+                    color: $clr-primaryOne;
+                    text-align: right;
+                    font-style: italic;
+                    font-size: .8rem;
+                    font-weight: 500;
+                    display: none;
+                }
+
+                &.error .input-group {
+                    border: 2px solid $clr-primaryOne;
+
+                    input {
+                        color: $clr-primaryOne;
+                    }
+
+                    .invalid-feedback {
+                        display: block;
+                    }
+                }
+
+                &.error .error-feedback {
+                    display: block;
                 }
             }
 
@@ -98,14 +133,20 @@ main {
                 font-weight: 600;
                 letter-spacing: 1px;
                 cursor: pointer;
+
+                &:hover {
+                    opacity: .65;
+                }
             }
 
             .information {
                 color: $clr-neutralTwo;
+                font-size: .8rem;
+                text-align: center;
 
                 .link {
                     color: $clr-primaryOne;
-                    font-weight: 600;
+                    font-weight: 700;
                 }
             }
         }
@@ -113,10 +154,30 @@ main {
 }
 
 @media (min-width: 768px) {
+    main {
+        padding: 3em 4em;
+        height: 100vh;
+    }
+
     .auth {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         text-align: left;
+        gap: 2em;
+
+        .intro {
+            .copy {
+                font-size: 3rem;
+                margin-bottom: .4em;
+            }
+        }
+
+        .card {
+            &.offer {
+                padding: 1.6em 0;
+                text-align: center;
+            }
+        }
     }
 }
