@@ -1,0 +1,221 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  padding: 0 1.2em;
+}
+
+.home {
+  background-color: #ebfbff;
+  background: url("../../images/bg-hero-mobile.svg") no-repeat;
+  background-size: cover;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.home .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+
+.home .header__logo {
+  width: 150px;
+}
+
+.home .header__button {
+  background-color: white;
+  padding: 6px 26px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 1.4rem;
+  color: #00252e;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.home .hero__info {
+  color: #00252e;
+  text-align: center;
+}
+
+.home .hero__info--copy {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+}
+
+.home .hero__info--description {
+  margin-bottom: 2rem;
+}
+
+.home .hero__info--button {
+  background-color: #ff52bf;
+  color: #ebfbff;
+  padding: .8rem 3rem;
+  display: inline-block;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+}
+
+.features__card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  margin-bottom: 2.6rem;
+  padding: 2.6rem 2.2rem;
+  border-radius: 1rem;
+  text-align: center;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.features__card--copy {
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #00252e;
+}
+
+.features__card--description {
+  color: #808d99;
+  font-size: .9rem;
+}
+
+.features__card--image {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-bottom: 1rem;
+}
+
+.offer-card {
+  padding: 2rem 1rem;
+  margin-top: 6rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 10px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 10px 0px;
+}
+
+.offer-card__copy {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+  color: #00252e;
+}
+
+.offer-card__button {
+  background-color: #ff52bf;
+  color: #ebfbff;
+  padding: .8rem 3rem;
+  display: inline-block;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 700;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.footer {
+  background-color: #00252e;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  color: #ebfbff;
+}
+
+.footer__info--logo {
+  width: auto;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  margin-bottom: 1.5rem;
+}
+
+.footer__info--icon {
+  width: auto;
+}
+
+.footer__info--list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.4rem;
+}
+
+.footer__info--list li p {
+  margin-left: 1rem;
+}
+
+.footer__links li {
+  margin-bottom: 1rem;
+}
+
+.footer__links li a {
+  color: inherit;
+}
+
+.footer__links:nth-child(3) {
+  margin-bottom: 3.4rem;
+}
+
+.footer__links--social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__links--social-media li {
+  margin: 0 .6rem;
+  border: 1px solid #ebfbff;
+  border-radius: 50%;
+  padding: .6rem .5rem;
+}
+
+.footer__links--social-media li a {
+  color: #ebfbff;
+}
+
+.footer__links--social-media li a .fab {
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=main.css.map */
