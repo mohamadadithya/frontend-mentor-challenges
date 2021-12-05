@@ -238,6 +238,12 @@ img {
     }
 
     .home {
+        .header {
+            &__button {
+                padding: 6px 3rem;
+            }
+        }
+
         .hero {
             @include grid-col-2();
             gap: 2rem;
@@ -258,6 +264,11 @@ img {
                 order: 1;
                 width: 380px;
                 justify-self: end;
+            }
+
+            &:nth-child(2) &--image {
+                order: -1;
+                justify-self: auto;
             }
         }
     }

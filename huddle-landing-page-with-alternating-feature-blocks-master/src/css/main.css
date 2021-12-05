@@ -246,6 +246,9 @@ img {
   .container {
     padding: 0 4rem;
   }
+  .home .header__button {
+    padding: 6px 3rem;
+  }
   .home .hero {
     display: -ms-grid;
     display: grid;
@@ -273,6 +276,13 @@ img {
     width: 380px;
     -ms-grid-column-align: end;
         justify-self: end;
+  }
+  .features__card:nth-child(2) .features__card--image {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -ms-grid-column-align: auto;
+        justify-self: auto;
   }
   .offer-card {
     width: -webkit-max-content;
