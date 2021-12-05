@@ -15,6 +15,16 @@ $neutralColorThree: hsl(208, 11%, 55%);
     border-radius: 2rem;
     cursor: pointer;
     font-weight: 700;
+
+    &:hover {
+        opacity: .7;
+        cursor: pointer;
+    }
+}
+
+@mixin grid-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 :root {
@@ -45,8 +55,7 @@ img {
 }
 
 .home {
-    background-color: $neutralColorOne;
-    background: url('../../images/bg-hero-mobile.svg') no-repeat;
+    background: $neutralColorOne url('../../images/bg-hero-mobile.svg') no-repeat;
     background-size: cover;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
@@ -73,6 +82,8 @@ img {
     }
 
     .hero {
+        display: block;
+
         &__info {
             color: $neutralColorTwo;
             text-align: center;
@@ -126,12 +137,17 @@ img {
 }
 
 .offer-card {
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
     margin-top: 6rem;
-    border-radius: 1rem;
+    transform: translateY(4rem);
+    border-radius: .8rem;
     text-align: center;
-    margin-bottom: 2rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 10px 0px;
+    background-color: white;
+    z-index: 2;
+    width: 100%;
+    margin: auto;
+
 
     &__copy {
         font-family: $secondaryFont;
@@ -148,17 +164,17 @@ img {
 
 .footer {
     background-color: $neutralColorTwo;
-    padding-top: 4rem;
+    padding-top: 8rem;
     padding-bottom: 3rem;
     color: $neutralColorOne;
 
-    &__info {
-        &--logo {
-            width: auto;
-            filter: brightness(0) invert(1);
-            margin-bottom: 1.5rem;
-        }
+    &__logo {
+        width: auto;
+        filter: brightness(0) invert(1);
+        margin-bottom: 1.5rem;
+    }
 
+    &__info {
         &--icon {
             width: auto;
         }
@@ -209,6 +225,67 @@ img {
             }
         }
     }
+
+    &__copyright {
+        text-align: center;
+        margin-top: 2rem;
+    }
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .container {
+        padding: 0 4rem;
+    }
+
+    .home {
+        .hero {
+            @include grid-col-2();
+            gap: 2rem;
+
+            &__info {
+                text-align: left;
+            }
+        }
+    }
+
+    .features {
+        &__card {
+            @include grid-col-2();
+            text-align: left;
+            align-items: center;
+
+            &--image {
+                order: 1;
+                width: 380px;
+                justify-self: end;
+            }
+        }
+    }
+
+    .offer-card {
+        width: max-content;
+        padding: 2rem 4rem;
+    }
+
+    .footer {
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+        }
+
+        &__links {
+            &:nth-child(3) {
+                margin-bottom: 0;
+            }
+
+            &--social-media {
+                align-items: flex-start;
+            }
+        }
+
+        &__copyright {
+            text-align: right;
+        }
+    }
+}
