@@ -1,0 +1,146 @@
+:root {
+    --clrPaleBlue: hsl(225, 100%, 94%);
+    --clrBrightBlue: hsl(245, 75%, 52%);
+    --clrVeryPaleBlue: hsl(225, 100%, 98%);
+    --clrDesaturatedBlue: hsl(224, 23%, 55%);
+    --clrDarkBlue: hsl(223, 47%, 23%);
+    --fontNormal: 500;
+    --fontBold: 600;
+    --fontBolder: 900;
+
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+body {
+    margin: 1rem;
+    background: url('../../images/pattern-background-mobile.svg') no-repeat;
+    background-size: cover;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+
+    &__image {
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        padding-top: 1.5rem;
+        font-weight: var(--fontBolder);
+        margin-bottom: 1rem;
+        color: var(--clrDarkBlue);
+    }
+
+    &__subtitle {
+        color: var(--clrDesaturatedBlue);
+        margin-bottom: 1.3rem;
+    }
+
+    &__offer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        width: 100%;
+        background-color: var(--clrVeryPaleBlue);
+        padding: 1rem 1.4rem;
+        border-radius: 8px;
+
+        span {
+            display: inherit;
+        }
+
+        &--icon {
+            margin-right: 1.2rem;
+        }
+
+        &--content {
+            p:nth-child(1) {
+                font-weight: var(--fontBold);
+                color: var(--clrDarkBlue);
+                margin-bottom: 3px;
+            }
+
+            p:nth-child(2) {
+                color: var(--clrDesaturatedBlue);
+            }
+        }
+
+        &--link {
+            color: var(--clrBrightBlue);
+
+            &:hover {
+                text-decoration: none;
+                opacity: .6;
+            }
+        }
+    }
+
+    &__button {
+        width: 100%;
+        background-color: var(--clrBrightBlue);
+        border: none;
+        color: var(--clrVeryPaleBlue);
+        padding: .8rem 0;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: var(--fontBold);
+        box-shadow: 0 8px 15px rgba($color: hsl(245, 75%, 52%), $alpha: .3);
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 2rem 0;
+        text-decoration: none;
+        color: var(--clrBrightBlue);
+        font-weight: var(--fontBold);
+
+        &:hover {
+            color: var(--clrDarkBlue);
+        }
+    }
+}
+
+// Desktop or Higher view
+@media (min-width: 768px) {
+    body {
+        margin: 0;
+        background: url('../../images/pattern-background-desktop.svg') no-repeat;
+    }
+
+    .card {
+        width: max-content;
+    }
+}
+
+.container {
+    margin: 0 2rem;
+}
