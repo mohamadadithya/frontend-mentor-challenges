@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here](https://order-summary-card-adithya.netlify.app)
+- Solution URL: [https://www.frontendmentor.io/solutions/order-summary-component-using-scss-nqazha7-Z](https://www.frontendmentor.io/solutions/order-summary-component-using-scss-nqazha7-Z)
+- Live Site URL: [https://order-summary-card-adithya.netlify.app](https://order-summary-card-adithya.netlify.app)
 
 ## My process
 
