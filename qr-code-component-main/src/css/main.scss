@@ -1,0 +1,63 @@
+:root {
+    --clrWhite: hsl(0, 0%, 100%);
+    --clrLightGray: hsl(212, 45%, 89%);
+    --clrGrayishBlue: hsl(220, 15%, 55%);
+    --clrDarkBlue: hsl(218, 44%, 22%);
+
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--clrLightGray);
+    padding: 0 1rem;
+}
+
+.card {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--clrWhite);
+    border-radius: 1rem;
+    text-align: center;
+    padding-bottom: 2.4rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    &__copy {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--clrDarkBlue);
+    }
+
+    &__description {
+        color: var(--clrGrayishBlue);
+        padding: 0 1rem;
+    }
+}
+
+// Tablet Version or Higher
+@media (min-width: 768px) {
+    .card {
+        width: 300px;
+    }
+}
