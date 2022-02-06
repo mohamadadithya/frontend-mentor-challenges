@@ -23,6 +23,8 @@
 
 body {
     background-color: var(--clrLightGrayishBlue);
+    display: grid;
+    place-items: center;
 }
 
 .testimonial-cards {
