@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/testimonials-grid-section-using-scss-cy9KPD1JT](https://www.frontendmentor.io/solutions/testimonials-grid-section-using-scss-cy9KPD1JT)
+- Live Site URL: [https://testimonials-grid-adithya.netlify.app/](https://testimonials-grid-adithya.netlify.app/)
 
 ## My process
 
