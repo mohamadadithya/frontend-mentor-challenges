@@ -26,6 +26,7 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  min-height: 100vh;
 }
 
 .testimonial-cards .container {
