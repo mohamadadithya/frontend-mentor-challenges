@@ -83,6 +83,11 @@ main .row-2 .col-2 {
   border-radius: 0 0 8px 8px;
 }
 
+main .row-2 .col-2 .list {
+  list-style: none;
+  margin-bottom: .2rem;
+}
+
 @media (min-width: 768px) {
   main {
     display: -ms-grid;

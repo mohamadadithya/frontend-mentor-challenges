@@ -79,6 +79,11 @@ main {
             background-color: var(--clrCyan);
             opacity: .8;
             border-radius: 0 0 8px 8px;
+
+            .list {
+                list-style: none;
+                margin-bottom: .2rem;
+            }
         }
     }
 }
