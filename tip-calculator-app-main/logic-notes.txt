@@ -1,0 +1,5 @@
+Count a Tip amount
+(Bill * Tip Percent) / People
+
+Count a total bill
+Bill + (Tip amount x People) / People

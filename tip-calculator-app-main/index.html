@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/src/css/main.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <h1 class="app-name">Spli<br>tter</h1>
+    <div class="container">
+      <div class="col-1">
+        <form class="form">
+          <div class="flex justify-between align-center">
+            <label for="bill" class="form__title">Bill</label>
+            <p class="form__error">Can't be a zero</p>
+          </div>
+          <div class="form__input" id="number-input">
+            <img src="/images/icon-dollar.svg" class="form__input--icon" alt="Dollar">
+            <input type="number" class="form__input--number" id="bill" placeholder="0">
+          </div>
+          <label for="five-percent" class="form__title">Select Tip %</label>
+          <div class="form__input">
+            <label for="five-percent" class="form__input--label">
+              <input type="radio" class="form__input--radio" id="five-percent" name="percent" value="0.05">
+              <p class="form__input--percent">5%</p>
+            </label>
+            <label for="ten-percent" class="form__input--label">
+              <input type="radio" class="form__input--radio" id="ten-percent" name="percent" value="0.1">
+              <p class="form__input--percent">10%</p>
+            </label>
+            <label for="fifteen-percent" class="form__input--label">
+              <input type="radio" class="form__input--radio" id="fifteen-percent" name="percent" value="0.15">
+              <p class="form__input--percent">15%</p>
+            </label>
+            <label for="twenty-five-percent" class="form__input--label">
+              <input type="radio" class="form__input--radio" id="twenty-five-percent" name="percent" value="0.25">
+              <p class="form__input--percent">25%</p>
+            </label>
+            <label for="fifty-percent" class="form__input--label">
+              <input type="radio" class="form__input--radio" id="fifty-percent" name="percent" value="0.5">
+              <p class="form__input--percent">50%</p>
+            </label>
+            <input type="number" class="form__input--custom" placeholder="Custom">
+          </div>
+          <div class="flex justify-between align-center">
+            <label for="num-of-people" class="form__title">Number of People</label>
+            <p class="form__error">Can't be a zero</p>
+          </div>
+          <div class="form__input" id="number-input">
+            <img src="/images/icon-person.svg" class="form__input--icon" alt="Person">
+            <input type="number" class="form__input--number" id="num-of-people" placeholder="0">
+          </div>
+        </form>
+      </div>
+      <div class="col-2">
+        <div id="wrapper">
+          <div class="output">
+            <p class="output__text">Tip Amount <span>/ person</span></p>
+            <p class="output__number">$<span id="tip-amount">0.00</span></p>
+          </div>
+          <div class="output">
+            <p class="output__text">Total <span>/ person</span></p>
+            <p class="output__number">$<span id="total">0.00</span></p>
+          </div>
+        </div>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </div>
+  </main>
+  <!-- Javascript -->
+  <script src="/src/js/app.js"></script>
+</body>
+
+</html>
