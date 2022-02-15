@@ -63,6 +63,8 @@ main {
   border-radius: 1.5rem;
   display: block;
   max-width: 900px;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 @media (min-width: 768px) {

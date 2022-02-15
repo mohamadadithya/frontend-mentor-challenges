@@ -89,6 +89,7 @@ main {
     border-radius: 1.5rem;
     display: block;
     max-width: 900px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
     @include respond(tablet) {
         display: grid;
