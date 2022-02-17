@@ -1,0 +1,226 @@
+:root {
+    --clrWork: hsl(15, 100%, 70%);
+    --clrPlay: hsl(195, 74%, 62%);
+    --clrStudy: hsl(348, 100%, 68%);
+    --clrExercise: hsl(145, 58%, 55%);
+    --clrSocial: hsl(264, 64%, 52%);
+    --clrSelfCare: hsl(43, 84%, 65%);
+    --clrVeryDarkBlue: hsl(226, 43%, 10%);
+    --clrDarkBlue: hsl(235, 46%, 20%);
+    --clrDesaturatedBlue: hsl(235, 45%, 61%);
+    --clrPaleBlue: hsl(236, 100%, 87%);
+    --clrCardHover: hsl(236, 41%, 34%);
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+
+@import './mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--clrVeryDarkBlue);
+    color: white;
+    min-height: 100vh;
+}
+
+main {
+    display: block;
+
+    @include respond(desktop) {
+        display: grid;
+    }
+
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: inherit;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    padding: 1.5rem;
+}
+
+.main-card {
+    grid-row: 1 / span 2;
+    border-radius: 1rem;
+    background-color: var(--clrDarkBlue);
+    margin-bottom: 2rem;
+    height: 100%;
+
+    &__head {
+        display: flex;
+        align-items: center;
+
+        @include respond(tablet) {
+            display: block;
+        }
+
+        padding: 2rem 1.5rem;
+        background-color: var(--clrDesaturatedBlue);
+        border-radius: 1rem;
+    }
+
+    &__image {
+        max-width: 80px;
+        border: 2px solid var(--clrPaleBlue);
+        border-radius: 50%;
+        margin-bottom: 2rem;
+        margin-right: 1.5rem;
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: .5rem;
+    }
+
+    &__foot {
+        padding: 2rem 1.5rem;
+        background-color: var(--clrDarkBlue);
+        border-radius: 1rem;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(desktop) {
+            display: block;
+        }
+    }
+
+    &__list {
+        @include respond(desktop) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__link {
+        color: var(--clrPaleBlue);
+        opacity: .5;
+        text-decoration: none;
+
+        &.active {
+            opacity: 1;
+            color: white;
+        }
+    }
+}
+
+.card {
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+
+    @include respond(desktop) {
+        margin-bottom: 0;
+    }
+
+    &--work {
+        background-color: var(--clrWork);
+    }
+
+    &--play {
+        background-color: var(--clrPlay);
+    }
+
+    &--study {
+        background-color: var(--clrStudy);
+    }
+
+    &--exercise {
+        background-color: var(--clrExercise);
+    }
+
+    &--social {
+        background-color: var(--clrSocial);
+    }
+
+    &--self-care {
+        background-color: var(--clrSelfCare);
+    }
+
+    &__head {
+        text-align: end;
+        max-height: 50px;
+        overflow: hidden;
+        padding-right: 1rem;
+    }
+
+    &__image {
+        object-fit: cover;
+        transform: translateY(-10px);
+    }
+
+    &__menu {
+        cursor: pointer;
+    }
+
+    &__foot {
+        padding: 2rem;
+        background-color: var(--clrDarkBlue);
+        border-radius: 1rem;
+        transition: .3s all ease;
+
+        &:hover {
+            background-color: var(--clrCardHover);
+        }
+
+        @include respond(desktop) {
+            padding-bottom: 4rem;
+        }
+    }
+
+    &__current {
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+
+    &__previous {
+        color: var(--clrPaleBlue);
+        font-size: .95rem;
+    }
+}
+
+/* Utility Classes */
+.flex {
+    display: flex;
+
+    &-md {
+        display: flex;
+
+        @include respond(desktop) {
+            display: block;
+        }
+    }
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
