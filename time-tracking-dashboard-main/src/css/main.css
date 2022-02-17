@@ -72,7 +72,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 4rem 1.5rem;
   background-color: var(--clrDesaturatedBlue);
   border-radius: 1rem;
 }
