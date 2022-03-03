@@ -1,0 +1,99 @@
+:root {
+    --clrLightCyan: hsl(193, 38%, 86%);
+    --clrNeonGreen: hsl(150, 100%, 66%);
+    --clrGrayishBlue: hsl(217, 19%, 38%);
+    --clrDarkGrayishBlue: hsl(217, 19%, 24%);
+    --clrDarkBlue: hsl(218, 23%, 16%);
+
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==tablet {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==desktop {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--clrDarkBlue);
+}
+
+main {
+    text-align: center;
+    margin: 0 2rem;
+}
+
+img {
+    width: 100%;
+
+    @include respond(tablet) {
+        width: auto;
+    }
+}
+
+.card-advice {
+    background-color: var(--clrDarkGrayishBlue);
+    color: var(--clrLightCyan);
+    padding: 3rem 2rem;
+    padding-bottom: 0;
+    border-radius: 1rem;
+
+    @include respond(tablet) {
+        max-width: 60%;
+    }
+
+    @include respond(desktop) {
+        max-width: 40%;
+    }
+
+    margin: 0 auto;
+
+    &__id {
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--clrNeonGreen);
+    }
+
+    &__advice {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 800;
+    }
+
+    &__divider {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__button {
+        display: inline-block;
+        background-color: var(--clrNeonGreen);
+        padding: 1.2rem 1.4rem;
+        border-radius: 50%;
+        transform: translateY(2rem);
+    }
+}
