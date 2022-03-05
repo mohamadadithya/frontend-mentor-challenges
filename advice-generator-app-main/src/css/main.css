@@ -37,12 +37,6 @@ img {
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  img {
-    width: auto;
-  }
-}
-
 .card-advice {
   background-color: var(--clrDarkGrayishBlue);
   color: var(--clrLightCyan);
@@ -54,13 +48,7 @@ img {
 
 @media (min-width: 768px) {
   .card-advice {
-    max-width: 60%;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-advice {
-    max-width: 40%;
+    max-width: 400px;
   }
 }
 
@@ -71,7 +59,7 @@ img {
   color: var(--clrNeonGreen);
 }
 
-.card-advice__advice {
+.card-advice__content {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 800;
@@ -83,10 +71,44 @@ img {
 }
 
 .card-advice__button {
+  cursor: pointer;
   display: inline-block;
   background-color: var(--clrNeonGreen);
   padding: 1.2rem 1.4rem;
   border-radius: 50%;
   -webkit-transform: translateY(2rem);
           transform: translateY(2rem);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.card-advice__button__dice.active {
+  animation: rotate 1s alternate-reverse infinite;
+}
+
+.card-advice__button:hover {
+  -webkit-box-shadow: var(--clrNeonGreen) 0px 5px 30px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+          box-shadow: var(--clrNeonGreen) 0px 5px 30px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }

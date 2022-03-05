@@ -48,10 +48,6 @@ main {
 
 img {
     width: 100%;
-
-    @include respond(tablet) {
-        width: auto;
-    }
 }
 
 .card-advice {
@@ -62,11 +58,7 @@ img {
     border-radius: 1rem;
 
     @include respond(tablet) {
-        max-width: 60%;
-    }
-
-    @include respond(desktop) {
-        max-width: 40%;
+        max-width: 400px;
     }
 
     margin: 0 auto;
@@ -78,7 +70,7 @@ img {
         color: var(--clrNeonGreen);
     }
 
-    &__advice {
+    &__content {
         font-size: 2rem;
         margin-bottom: 2rem;
         font-weight: 800;
@@ -90,10 +82,32 @@ img {
     }
 
     &__button {
+        cursor: pointer;
         display: inline-block;
         background-color: var(--clrNeonGreen);
         padding: 1.2rem 1.4rem;
         border-radius: 50%;
         transform: translateY(2rem);
+        transition: .5s;
+
+        &__dice {
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            &.active {
+                animation: rotate 1s alternate-reverse infinite;
+            }
+        }
+
+        &:hover {
+            box-shadow: var(--clrNeonGreen) 0px 5px 30px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
     }
 }
