@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="/src/css/main.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Notyf CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+</head>
+
+<body>
+  <main>
+    <div class="card rating">
+      <img src="/images/icon-star.svg" class="card__icon" alt="Star">
+      <h1 class="card__headline">How did we do?</h1>
+      <p class="card__description">Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+      <form id="rating-form">
+        <ul class="card__list">
+          <li>
+            <label class="card__list__label" for="rating-1">
+              1
+              <input type="radio" class="card__list__radio" name="rating" id="rating-1" value="1">
+            </label>
+          </li>
+          <li>
+            <label class="card__list__label" for="rating-2">
+              2
+              <input type="radio" class="card__list__radio" name="rating" id="rating-2" value="2">
+            </label>
+          </li>
+          <li>
+            <label class="card__list__label" for="rating-3">
+              3
+              <input type="radio" class="card__list__radio" name="rating" id="rating-3" value="3">
+            </label>
+          </li>
+          <li>
+            <label class="card__list__label" for="rating-4">
+              4
+              <input type="radio" class="card__list__radio" name="rating" id="rating-4" value="4">
+            </label>
+          </li>
+          <li>
+            <label class="card__list__label" for="rating-5">
+              5
+              <input type="radio" class="card__list__radio" name="rating" id="rating-5" value="5">
+            </label>
+          </li>
+        </ul>
+        <button type="submit" class="card__btn--submit">Submit</button>
+      </form>
+    </div>
+    <div class="card thank">
+      <img src="/images/illustration-thank-you.svg" class="card__illustration" alt="Thank You">
+      <p class="card__badge">You selected <span id="rating-value"></span> out of 5</p>
+      <h2 class="card__headline">Thank You</h2>
+      <p class="card__description thank">
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!
+      </p>
+    </div>
+  </main>
+
+  <!-- Notyf JS -->
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+  <script src="/src/js/app.js"></script>
+</body>
+
+</html>
