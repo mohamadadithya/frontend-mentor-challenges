@@ -81,7 +81,6 @@ main {
 
     &__description {
         color: var(--clrLightGrey);
-        margin-bottom: 2rem;
 
         &.thank {
             margin-bottom: 0;
@@ -92,7 +91,7 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 2.5rem;
+        margin: 2.5rem 0;
 
         &__label {
             background-color: var(--clrGray);
@@ -134,6 +133,7 @@ main {
             color: var(--clrWhite);
             text-transform: uppercase;
             letter-spacing: .15rem;
+            margin-top: .5rem;
 
             &:hover {
                 background-color: var(--clrWhite);

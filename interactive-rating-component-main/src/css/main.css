@@ -70,7 +70,6 @@ main {
 
 .card__description {
   color: var(--clrLightGrey);
-  margin-bottom: 2rem;
 }
 
 .card__description.thank {
@@ -87,7 +86,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 2.5rem;
+  margin: 2.5rem 0;
 }
 
 .card__list__label {
@@ -128,6 +127,7 @@ main {
   color: var(--clrWhite);
   text-transform: uppercase;
   letter-spacing: .15rem;
+  margin-top: .5rem;
 }
 
 .card__btn--submit:hover {
