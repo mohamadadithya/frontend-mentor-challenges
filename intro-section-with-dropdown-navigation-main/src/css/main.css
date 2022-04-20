@@ -321,7 +321,7 @@ img {
   background-color: var(--clrAlmostBlack);
   color: var(--clrAlmostWhite);
   padding: .920rem 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   border-radius: 1rem;
   border: 1px solid var(--clrAlmostBlack);
   -webkit-transition: background-color .3s ease;
