@@ -1,0 +1,137 @@
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--clrAlmostWhite);
+
+    @include respond(desktop) {
+        display: flex;
+        justify-content: unset;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__menu-btn {
+        background-color: transparent;
+        @include respond(desktop) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        position: fixed;
+        right: 0;
+        background-color: var(--clrAlmostWhite);
+        height: 100vh;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        transform: translateX(100%);
+        transition: transform .5s ease;
+
+        &.opened {
+            transform: translateX(0);
+            width: 65%;
+        }
+
+        @include respond(desktop) {
+            position: unset;
+            flex-direction: row;
+            height: fit-content;
+            align-items: center;
+            margin-left: 3rem;
+            padding: 0;
+            transform: none;
+        }
+
+        &__item {
+            position: relative;
+            margin-right: 3rem;
+            padding: .8rem 0;
+            @include respond(desktop) {
+                padding: 0;
+            }
+
+            &__link {
+                color: var(--clrMediumGray);
+
+                &--button {
+                    display: inline-block;
+                    border: 1px solid black;
+                    padding: .6rem 1rem;
+                    border-radius: .6rem;
+                    transition: background-color .3s ease;
+
+                    &:hover {
+                        background-color: var(--clrAlmostBlack);
+                        color: var(--clrAlmostWhite);
+                    }
+                }
+
+                &.dropdown {
+                    display: flex;
+                    align-items: center;
+
+                    .icon {
+                        margin-left: .5rem;
+                    }
+                }
+
+            }
+
+            &__dropdown {
+                display: none;
+                color: var(--clrMediumGray);
+                padding-top: 1rem;
+                margin-left: 1rem;
+
+                &.opened {
+                    display: block;
+                }
+
+                @include respond(desktop) {
+                    position: absolute;
+                    left: 0;
+                    width: 8rem;
+                    font-size: .8rem;
+                    top: 2rem;
+                    padding: .8rem 1rem;
+                    background-color: var(--clrAlmostWhite);
+                    border-radius: .4rem;
+                    margin-left: 0;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                }
+
+                li {
+                    padding: .6rem 0;
+
+                    img {
+                        margin-right: .5rem;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &.auth {
+            .login {
+                margin-right: 1.5rem;
+            }
+
+            margin-left: auto;
+            @include respond(desktop) {
+                display: flex;
+            }
+            display: none;
+        }
+    }
+}

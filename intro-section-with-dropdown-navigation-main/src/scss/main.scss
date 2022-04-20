@@ -1,0 +1,18 @@
+:root {
+    --clrAlmostWhite: hsl(0, 0%, 98%);
+    --clrMediumGray: hsl(0, 0%, 41%);
+    --clrAlmostBlack: hsl(0, 0%, 8%);
+    --fontNormal: 400;
+    --fontBold: 700;
+
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+
+@import 'mixins/queries', 'reset', 'utilities', 'partials/navbar', 'partials/content';
+
+main {
+    padding-top: 4.5rem;
+    background-color: var(--clrAlmostWhite);
+    height: 100vh;
+}

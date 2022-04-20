@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/src/css/main.min.css">
+</head>
+
+<body>
+  <main>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <header class="navbar__header">
+        <a href="#" aria-label="snap's logo">
+          <img src="/images/logo.svg" alt="snap">
+        </a>
+        <button class="navbar__menu-btn" id="menu-btn">
+          <img src="/images/icon-menu.svg" class="menu-icon" alt="Menu">
+        </button>
+      </header>
+      <ul class="navbar__list" id="navbar-menu">
+        <li class="navbar__list__item">
+          <a href="#" class="navbar__list__item__link dropdown">Features <img class="icon"
+              src="/images/icon-arrow-down.svg" alt="Arrow down"></a>
+          <ul class="navbar__list__item__dropdown" id="dropdown-menu">
+            <li>
+              <a href="#">
+                <img src="/images/icon-todo.svg" alt="Todo">
+                Todo List
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/images/icon-calendar.svg" alt="Calendar">
+                Calendar
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/images/icon-reminders.svg" alt="Reminders">
+                Reminders
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/images/icon-planning.svg" alt="Planning">
+                Planning
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar__list__item">
+          <a href="#" class="navbar__list__item__link dropdown">Company <img class="icon"
+              src="/images/icon-arrow-down.svg" alt="Arrow down"></a>
+          <ul class="navbar__list__item__dropdown" id="dropdown-menu">
+            <li>
+              <a href="#">History</a>
+            </li>
+            <li>
+              <a href="#">Our Team</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar__list__item">
+          <a href="#" class="navbar__list__item__link">Careers</a>
+        </li>
+        <li class="navbar__list__item">
+          <a href="#" class="navbar__list__item__link">About</a>
+        </li>
+      </ul>
+      <ul class="navbar__list auth">
+        <li class="navbar__list__item login">
+          <a href="#" class="navbar__list__item__link">Login</a>
+        </li>
+        <li class="navbar__list__item">
+          <a href="#" role="button" class="navbar__list__item__link--button">Register</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- End of Navbar -->
+    <!-- Content Section -->
+    <section class="content">
+      <div class="content__wrapper">
+        <img class="content__image" src="/images/image-hero-mobile.png" alt="Hero">
+        <img class="content__image" src="/images/image-hero-desktop.png" alt="Hero">
+        <div class="container">
+          <h1 class="content__headline">Make remote work</h1>
+          <p class="content__description">
+            Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.
+          </p>
+          <a href="#" class="content__button" role="button">Learn more</a>
+          <div class="content__sponsors">
+            <img src="/images/client-databiz.svg" class="content__sponsors__image" alt="Databiz">
+            <img src="/images/client-audiophile.svg" class="content__sponsors__image" alt="Audiophile">
+            <img src="/images/client-meet.svg" class="content__sponsors__image" alt="Meet">
+            <img src="/images/client-maker.svg" class="content__sponsors__image" alt="Maker">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Content Section -->
+  </main>
+  <!-- Javascript -->
+  <script src="/src/js/app.js"></script>
+</body>
+
+</html>

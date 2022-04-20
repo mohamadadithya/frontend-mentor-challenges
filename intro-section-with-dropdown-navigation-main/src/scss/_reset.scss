@@ -1,0 +1,20 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    object-fit: cover;
+}
