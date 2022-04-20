@@ -65,16 +65,21 @@
             &__link {
                 color: var(--clrMediumGray);
 
+                &:hover {
+                    color: var(--clrAlmostBlack);
+                }
+
                 &--button {
                     display: inline-block;
-                    border: 1px solid black;
+                    border: 2px solid var(--clrMediumGray);
+                    color: var(--clrMediumGray);
                     padding: .6rem 1rem;
-                    border-radius: .6rem;
+                    border-radius: .8rem;
                     transition: background-color .3s ease;
 
                     &:hover {
-                        background-color: var(--clrAlmostBlack);
-                        color: var(--clrAlmostWhite);
+                        border-color: var(--clrAlmostBlack);
+                        color: var(--clrAlmostBlack);
                     }
                 }
 
