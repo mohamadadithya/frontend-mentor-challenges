@@ -21,3 +21,4 @@ This repository contains challenges from frontendmentors that I have worked on.
 | Advice generator app                                   | HTML, SCSS, CSS, JS | https://advice-generator-adithya.netlify.app/                 |
 | Interactive rating component                           | HTML, SCSS, CSS, JS | https://interactive-rating-adithya.netlify.app/               |
 | Intro section with dropdown navigation                 | HTML, SCSS, CSS, JS | https://intro-section-with-dropdown-adithya.netlify.app/      |
+| Product preview card component                         | HTML, CSS           | https://ma-product-preview-card-component.netlify.app/        |
