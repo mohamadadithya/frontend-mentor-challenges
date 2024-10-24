@@ -1,0 +1,33 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+	src: url('../fonts/static/RedHatText-Regular.ttf') format('truetype');
+	font-family: 'RedHatText Regular';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	src: url('../fonts/static/RedHatText-SemiBold.ttf') format('truetype');
+	font-family: 'RedHatText Semibold';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	src: url('../fonts/static/RedHatText-Bold.ttf') format('truetype');
+	font-family: 'RedHatText Bold';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@layer components {
+	.primary-btn {
+		@apply bg-primary text-rose-50 rounded-full;
+	}
+}
