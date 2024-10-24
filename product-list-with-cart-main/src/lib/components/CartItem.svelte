@@ -16,7 +16,7 @@
 		besidePrice?: Snippet;
 	} = $props();
 
-	const { item: product } = item;
+	const product = $derived(item.item);
 </script>
 
 <div transition:slide={{ duration: 350 }} class="flex items-center justify-between py-5 border-b">
