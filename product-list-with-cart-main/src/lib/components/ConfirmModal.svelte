@@ -7,8 +7,10 @@
 	import CartItem from './CartItem.svelte';
 	import { fly } from 'svelte/transition';
 
-	let { totalRow }: { totalRow: Snippet } = $props();
-	let modalEl = $state<HTMLDialogElement>();
+	let {
+		totalRow,
+		modalEl = $bindable()
+	}: { totalRow: Snippet; modalEl: HTMLDialogElement | undefined } = $props();
 
 	function startNewOrder() {
 		modalEl?.close();

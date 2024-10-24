@@ -75,4 +75,4 @@
 	</div>
 {/if}
 
-<ConfirmModal {totalRow} />
+<ConfirmModal bind:modalEl {totalRow} />
